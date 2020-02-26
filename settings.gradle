@@ -1,0 +1,3 @@
+include ':app', ':data', ':domain', ':usecases'
+rootProject.name='Transactions'
+include ':testShared'

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Transactions</string>
+    <string name="fees">Fees : %1$s</string>
+    <string name="no_fees">No fees</string>
+    <string name="no_description">No description</string>
+    <string name="transactions">Transanctions</string>
+    <string name="currency">€</string>
+    <string name="amount">Total amount</string>
+    <string name="no_items">There are no transactions currently, please check your connectivity and try again</string>
+
+<!--Errors-->
+    <string name="no_connectivity">No connectivity</string>
+    <string name="server_error_code">Server error code: %1$s</string>
+    <string name="json_exception">JsonException</string>
+</resources>

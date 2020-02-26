@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    def kotlinLibs = rootProject.ext.kotlinLibs
+    def test = rootProject.ext.test
+
+    implementation kotlinLibs.values()
+    testImplementation test.values()
+}

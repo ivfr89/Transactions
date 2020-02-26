@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation project(':domain')
+
+    def kotlinLibs = rootProject.ext.kotlinLibs
+    def test = rootProject.ext.test
+
+    implementation kotlinLibs.values()
+    testImplementation test.values()
+    implementation androidTest.values()
+}
