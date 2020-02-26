@@ -100,6 +100,18 @@ Esto es así ya que de esta forma se controla cada uno de los fallos posibles a 
 
 Luego cada capa tiene un modelo diferente: Transaction tiene: un modelo de UI donde se hacen algunas conversiones con el tiempo , un modelo del servidor entity y un modelo de dominio
 
+La forma de mostrarlo en pantalla es muy simple, los requisitos se cumplen en apenas 4 líneas:
+
+```
+_state.value = MainUIState.ShowTransactions(
+                            list.mapNotNull { it.toUI() }
+                                .groupBy { it.id }
+                                .map { it.value.maxBy { value-> value.date }!! }
+                                .sortedByDescending { it.date }
+                        )
+                        
+```
+
 ## Bibliotecas más importantes
 
 retrofit: Para el consumo del Api
